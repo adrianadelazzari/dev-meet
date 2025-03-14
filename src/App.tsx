@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { ThemeProvider } from "./theme/ThemeProvider";
+import CssBaseline from "@mui/material/CssBaseline";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";
+import Home from "./components/Home/Home";
+import Events from "./components/Events/Events";
+import Bookmarks from "./components/Bookmarks/Bookmarks";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <CssBaseline />
+      <Router>
+        <Navbar />
+        <main style={{ padding: "20px", maxWidth: "1200px", margin: "auto" }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/events" element={<Events />} />
+            <Route path="/bookmarks" element={<Bookmarks />} />
+          </Routes>
+        </main>
+      </Router>
+    </ThemeProvider>
   );
 }
-
-export default App;
