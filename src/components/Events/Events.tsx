@@ -60,13 +60,15 @@ export default function Events() {
 
   return (
     <Box sx={{ textAlign: "center", padding: "10px" }}>
-      <Typography variant="h3">Upcoming Meetups</Typography>
+      <Typography variant="h3" sx={{ marginY: 3 }}>
+        Upcoming Meetups
+      </Typography>
       <Box
         sx={{
           display: "flex",
           justifyContent: "center",
           gap: 2,
-          marginTop: "30px",
+          marginTop: 5,
         }}
       >
         <TextField

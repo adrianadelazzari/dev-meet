@@ -38,7 +38,9 @@ export default function Bookmarks() {
 
   return (
     <Box sx={{ textAlign: "center", padding: "20px" }}>
-      <Typography variant="h3">Bookmarked Meetups</Typography>
+      <Typography variant="h3" sx={{ marginY: 3 }}>
+        Bookmarked Meetups
+      </Typography>
       <TextField
         label="Search Bookmarked Events"
         variant="outlined"

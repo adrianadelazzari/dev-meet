@@ -1,26 +1,34 @@
 import React from "react";
 import { ThemeProvider } from "./theme/ThemeProvider";
 import CssBaseline from "@mui/material/CssBaseline";
+import Container from "@mui/material/Container";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
 import Home from "./components/Home/Home";
 import Events from "./components/Events/Events";
 import Bookmarks from "./components/Bookmarks/Bookmarks";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
-export default function App() {
+const App = () => {
   return (
     <ThemeProvider>
       <CssBaseline />
       <Router>
         <Navbar />
-        <main style={{ padding: "20px", maxWidth: "1200px", margin: "auto" }}>
+        <Container
+          maxWidth="lg"
+          sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+        >
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/events" element={<Events />} />
             <Route path="/bookmarks" element={<Bookmarks />} />
           </Routes>
-        </main>
+          <Footer />
+        </Container>
       </Router>
     </ThemeProvider>
   );
-}
+};
+
+export default App;
