@@ -31,8 +31,8 @@ Users can **search, filter, and save events**, ensuring they never miss an impor
 1️⃣ **Clone the Repository**
 
 ```sh
-git clone https://github.com/adrianadelazzari/devmeet.git
-cd devmeet
+git clone https://github.com/adrianadelazzari/dev-meet.git
+cd dev-meet
 ```
 
 ### 2️⃣ Install Dependencies
